@@ -30,12 +30,14 @@ const Slider = () => {
       >
         {/* Map over the slide images and render each as a slide */}
         {slideImages.map((slide, index) => (
+          <div className="slide-image-container">
           <img
             key={index} // Add key for each slide
-            className="object-contain sm:m-auto" // CSS classes for the slide image
+            className="object-contain sm:m-auto rounded-xl" // CSS classes for the slide image
             src={`${slide.url}`} // Image source
             alt="" // Image alt attribute
-          />
+            />
+            </div>
         ))}
       </Slide>
     </div>
