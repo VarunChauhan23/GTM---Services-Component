@@ -1,0 +1,49 @@
+.text-container {
+    margin-left: 4px;
+    display: flex;
+    flex-direction: column;
+}
+
+.headings {
+    font-size: 30px;
+    line-height: 15px;
+    font: bold;
+}
+
+.ios-heading {
+    font-size: 36px;
+    line-height: 32px;
+    font: bold;
+    color: #0D99FF;
+}
+
+.line-break {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    margin-left: 4px;
+    margin-right: 4px;
+    border-top-width: 2px;
+    border-color: rgb(17 24 39);
+}
+
+@media (min-width: 640px) {
+    .text-container {
+        margin: auto;
+    }
+
+    .headings {
+        font-size: 36px;
+        line-height: 15px;
+    }
+
+    .ios-heading {
+        font-size: 60px;
+        line-height: 1;
+    }
+
+    .line-break {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+}

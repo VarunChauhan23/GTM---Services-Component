@@ -9,7 +9,7 @@ const App = () => {
   return (
     <>
       <MainHeading />
-      <div className='sm:flex sm:justify-center'>
+      <div className='main-container'>
         <TextComponent />
         <Slider />
       </div>

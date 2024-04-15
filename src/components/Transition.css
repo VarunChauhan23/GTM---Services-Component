@@ -1,0 +1,8 @@
+.transition-text {
+    font-size: 24px;
+    line-height: 32px;
+    color: rgb(251 146 60);
+    background-image: linear-gradient(to right, #F13E1E, #FFD700);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
