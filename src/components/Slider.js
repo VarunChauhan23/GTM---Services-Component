@@ -1,7 +1,7 @@
 import React from "react";
 import { Slide } from "react-slideshow-image"; // Import Slide component from react-slideshow-image
 import "react-slideshow-image/dist/styles.css"; // Import default styles for the slide show
-import styles from './Slider.module.css';
+import styles from "./Slider.module.css";
 
 const Slider = () => {
   // Define an array of slide images
@@ -17,10 +17,32 @@ const Slider = () => {
     },
   ];
 
+  const prevButtonStyle = {
+    display: "none",
+};
+
+  const NextButtonStyle = {
+    marginLeft: "-30px",
+    height: "100px",
+    width: "100px",
+    background: "#FFFFFF",
+    color: "#F25235",
+    borderRadius: "50%",
+    border: "none",
+    fontSize: "60px",
+    fontWeight: "800"
+  }
+
+const properties = {
+    prevArrow: <button style={{ ...prevButtonStyle }}><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="#fff"><path d="M242 180.6v-138L0 256l242 213.4V331.2h270V180.6z"/></svg></button>,
+    nextArrow: <button style={{ ...NextButtonStyle }}>{">"}</button>
+}
+
   return (
     <div className={styles["slider-container"]}>
       {/* Container for the slider */}
       <Slide
+        {...properties}
         arrows={true} // Show navigation arrows
         duration={1500} // Slide transition duration in milliseconds
         canSwipe={false} // Disable swiping

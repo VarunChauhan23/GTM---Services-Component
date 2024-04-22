@@ -1,5 +1,5 @@
 import React from 'react'
-import Transition from './Transition'
+import GradientTransition from './Transition'
 import styles from './TextComponent.module.css'
 
 const TextComponent = () => {
@@ -10,7 +10,7 @@ const TextComponent = () => {
         <h2 className={styles['headings']}>provided by us:</h2>
         <h1 className={styles['ios-heading']}>IOS Development</h1>
         <hr className={styles['line-break']} />
-        <Transition />
+        <GradientTransition />
       </div>
     </div>
   )
