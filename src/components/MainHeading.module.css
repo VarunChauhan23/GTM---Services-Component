@@ -1,37 +1,40 @@
 .heading-container {
     display: flex;
     justify-content: space-between;
-    margin-left: 4px;
+    margin-bottom: 30px;
 }
 
 .empty-lines {
     background: black;
     font: bold;
     margin: auto;
-    width: 35vw;
+    width: 40vw;
     height: 4px;
 }
 
 .heading {
     color: black;
     font: bold;
-    margin-top: 4px;
-    margin-bottom: 4px;
+    margin: auto;
     font-size: 30px;
     line-height: 36px;
 }
 
-@media (min-width: 640px) {
+@media (max-width: 640px) {
     .heading-container {
-        margin: auto;
+        margin-left: 4px;
+        margin-bottom: 10px;
     }
 
     .empty-lines {
-        width: 40vw;
+        width: 35vw;
+        height: 4px;
+        margin: auto;
     }
 
     .heading {
-        margin: auto;
+        margin-left: 5px;
+        margin-right: 5px;
     }
 
 }

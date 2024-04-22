@@ -2,9 +2,8 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 12px;
-    margin-bottom: 12px;
-    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 .button {
@@ -22,10 +21,10 @@
     transition: background-position 1s ease;
 }
 
-@media (min-width: 640px) {
+@media (max-width: 640px) {
     .button-container {
-        margin-top: 40px;
-        margin-bottom: 40px;
+        margin-top: 12px;
+        margin-bottom: 12px;
     }
 
 }

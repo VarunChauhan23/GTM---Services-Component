@@ -1,7 +1,7 @@
 import React from "react";
 import { Slide } from "react-slideshow-image"; // Import Slide component from react-slideshow-image
 import "react-slideshow-image/dist/styles.css"; // Import default styles for the slide show
-import "./Slider.css"; // Import custom CSS styles for the slider
+import styles from './Slider.module.css';
 
 const Slider = () => {
   // Define an array of slide images
@@ -18,7 +18,7 @@ const Slider = () => {
   ];
 
   return (
-    <div className="slider-container">
+    <div className={styles["slider-container"]}>
       {/* Container for the slider */}
       <Slide
         arrows={true} // Show navigation arrows
@@ -26,12 +26,12 @@ const Slider = () => {
         canSwipe={false} // Disable swiping
         pauseOnHover={true} // Pause slide transition on hover
         transitionDuration={1500} // Transition duration between slides
-        cssClass="slider" // Additional CSS class for the slide container
+        cssClass={styles["slider"]} // Additional CSS class for the slide container
       >
         {/* Map over the slide images and render each as a slide */}
         {slideImages.map((slide, index) => (
-          <div className="slide-image-container" key={index}>
-            <img className="slide-image" src={slide.url} alt="" />
+          <div className={styles["slide-image-container"]} key={index}>
+            <img className={styles["slide-image"]} src={slide.url} alt="" />
           </div>
         ))}
       </Slide>

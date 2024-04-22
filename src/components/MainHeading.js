@@ -1,12 +1,12 @@
 import React from 'react';
-import './MainHeading.css';
+import styles from './MainHeading.module.css';
 
 const MainHeading = () => {
   return (
-    <div className='heading-container'>
-        <div className='empty-lines'></div>
-        <div className='heading'>Services</div>
-        <div className='empty-lines'></div>
+    <div className={styles['heading-container']}>
+        <div className={styles['empty-lines']}></div>
+        <div className={styles['heading']}>Services</div>
+        <div className={styles['empty-lines']}></div>
     </div>
   )
 }

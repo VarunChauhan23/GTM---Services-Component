@@ -1,6 +1,6 @@
 import React from 'react';
-import TextTransition, { presets } from 'react-text-transition'; // Import TextTransition component and presets from react-text-transition
-import './Transition.css';
+import TextTransition, { presets } from 'react-text-transition';
+import styles from './Transition.module.css';
 
 // Define an array of texts to transition between
 const TEXTS = [
@@ -26,7 +26,7 @@ const Transition = () => {
   return (
     <>
       {/* Render the TextTransition component */}
-      <h1 className="transition-text">
+      <h1 className={styles["transition-text"]}>
         {/* Provide springConfig for the TextTransition animation */}
         <TextTransition springConfig={presets.wobbly}>
           {/* Render the current text based on the index */}
