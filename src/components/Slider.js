@@ -21,22 +21,32 @@ const Slider = () => {
     display: "none",
 };
 
-  const NextButtonStyle = {
-    marginLeft: "-30px",
-    height: "100px",
-    width: "100px",
-    background: "#FFFFFF",
-    color: "#F25235",
-    borderRadius: "50%",
-    border: "none",
-    fontSize: "60px",
-    fontWeight: "800"
-  }
+const NextButtonStyle = {
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  marginLeft: "-30px",
+  height: "100px",
+  width: "100px",
+  background: "#FFFFFF",
+  color: "#F25235",
+  borderRadius: "50%",
+  border: "none",
+  fontSize: "60px",
+  fontWeight: "800"
+};
+
+const nextButtonStyleMobile = {
+  height: "70px",
+  width: "70px",
+  fontSize: "50px",
+};
 
 const properties = {
-    prevArrow: <button style={{ ...prevButtonStyle }}><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="#fff"><path d="M242 180.6v-138L0 256l242 213.4V331.2h270V180.6z"/></svg></button>,
-    nextArrow: <button style={{ ...NextButtonStyle }}>{">"}</button>
-}
+  prevArrow: <button style={{ ...prevButtonStyle }}><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="#fff"><path d="M242 180.6v-138L0 256l242 213.4V331.2h270V180.6z"/></svg></button>,
+  nextArrow: <button style={{ ...NextButtonStyle, ...(window.innerWidth <= 640 && nextButtonStyleMobile) }}>{">"}</button>
+};
+
 
   return (
     <div className={styles["slider-container"]}>
